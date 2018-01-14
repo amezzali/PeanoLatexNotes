@@ -14,6 +14,9 @@
 
 \usepackage[colorlinks]{hyperref} % per aggiungere link al testo
 
+\usepackage{graphicx} % per includere immagini
+\usepackage{wrapfig} % per immergere le immagini nel testo
+
 \begin{document}
 
 % Creazione del titolo
@@ -160,10 +163,27 @@ Potete anche rendere l'equazione non numerata
 \nonumber % ecco come togliere il numero. Ma ci sono alternative 
 \end{equation}
 
-Notate che potete sempre richiamare l'equazione \ref{prima_equazione} nel testo usando \verb!\label! e \verb!\ref!. 
+Notate che potete sempre richiamare l'equazione \ref{prima_equazione} 
+nel testo usando \verb!\label! e \verb!\ref!. 
 
 
 \section{Immagini}
+
+Anche qui ci sono varie opzioni. Utilizzeremo qui il pacchetto \verb!graphicx!
+Si possono modifica l'altezza, la larghezza, la scala, la posizione\dots
+
+\includegraphics[scale=.5]{peano.jpeg}
+
+Talvolta si potrebbe voler avvolgere una figura con il testo.
+E' possibile farlo utilizzando il pacchetto \verb!wrapfig!.
+
+\begin{wrapfloat}{figure}{I}{0pt}
+\includegraphics[width=0.5\textwidth]{peano.jpeg}
+\end{wrapfloat}
+Per avere un buon risultato, possono servire
+alcuni aggiustamenti manuali.
+
+\lipsum[1]
 
 
 % Bibliografia
